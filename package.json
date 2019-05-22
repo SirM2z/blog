@@ -11,6 +11,7 @@
     "dev": "gatsby develop",
     "build": "gatsby build --prefix-paths",
     "deploy": "now",
+    "g-now": "node scripts/generate-now.js",
     "now-build": "npm run build"
   },
   "dependencies": {
@@ -45,6 +46,8 @@
     "@types/react-helmet": "^5.0.8",
     "@types/react-jss": "^8.6.3",
     "@types/typography": "^0.16.2",
+    "chalk": "^2.4.2",
+    "fs-extra": "^8.0.1",
     "gatsby": "^2.1.13",
     "gatsby-plugin-baidu-analytics": "^1.1.16",
     "gatsby-plugin-catch-links": "^2.0.13",

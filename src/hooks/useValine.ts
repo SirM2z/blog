@@ -1,13 +1,19 @@
 import { useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-// @ts-ignore
-import Valine from 'valine';
-import leancloudStorage from 'leancloud-storage';
-import _ from 'lodash/fp';
 
-// Valine 依赖 leancloudStorage ，将其挂载全局，兼容 ssr 时 window 不存在
-const globalWindow: any = window ? window : global;
-globalWindow.AV = leancloudStorage;
+// @ts-ignore
+import _ from 'lodash/fp';
+// import Valine from 'valine';
+// import leancloudStorage from 'leancloud-storage';
+// 兼容 ssr 写法，以下两个库使用了 window
+if (typeof window !== `undefined`) {
+  var Valine = require("valine");
+  var leancloudStorage = require("leancloud-storage");
+
+  // Valine 依赖 leancloudStorage ，将其挂载全局
+  var globalWindow: any = window;
+  globalWindow.AV = leancloudStorage;
+}
 
 const useValine = (elemantId: string, path: string) => {
   const data = useStaticQuery(graphql`

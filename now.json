@@ -1,0 +1,195 @@
+{
+  "version": 2,
+  "name": "blog",
+  "alias": "www.ryanc.top",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    },
+    {
+      "src": "static/**",
+      "use": "@now/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "^/public/static/(.*)",
+      "headers": { "cache-control": "public,max-age=31536000,immutable" }
+    },
+    {
+      "src": "^/(.*).(css|js)",
+      "headers": { "cache-control": "public,max-age=31536000,immutable" }
+    },
+    {
+      "src": "^/(.*).html",
+      "headers": { "cache-control": "public,max-age=0,must-revalidate" }
+    },
+    {
+      "src": "/post/css3-learn-notes-1",
+      "status": 301,
+      "headers": { "Location": "/post/2015/05/css3-learn-notes-1" }
+    },
+    {
+      "src": "/post/css3-learn-notes-2",
+      "status": 301,
+      "headers": { "Location": "/post/2015/05/css3-learn-notes-2" }
+    },
+    {
+      "src": "/post/css3-learn-notes-3",
+      "status": 301,
+      "headers": { "Location": "/post/2015/05/css3-learn-notes-3" }
+    },
+    {
+      "src": "/post/css3-learn-notes-4",
+      "status": 301,
+      "headers": { "Location": "/post/2015/05/css3-learn-notes-4" }
+    },
+    {
+      "src": "/post/css3-learn-notes-5",
+      "status": 301,
+      "headers": { "Location": "/post/2015/05/css3-learn-notes-5" }
+    },
+    {
+      "src": "/post/github-workflow",
+      "status": 301,
+      "headers": { "Location": "/post/2015/12/github-workflow" }
+    },
+    {
+      "src": "/post/js-scope-1",
+      "status": 301,
+      "headers": { "Location": "/post/2016/01/js-scope-1" }
+    },
+    {
+      "src": "/post/js-scope-extend",
+      "status": 301,
+      "headers": { "Location": "/post/2016/01/js-scope-extend" }
+    },
+    {
+      "src": "/post/css-text-overflow-ellipsis",
+      "status": 301,
+      "headers": { "Location": "/post/2016/04/css-text-overflow-ellipsis" }
+    },
+    {
+      "src": "/post/css-inline-block-solutions",
+      "status": 301,
+      "headers": { "Location": "/post/2016/06/css-inline-block-solutions" }
+    },
+    {
+      "src": "/post/es6-learn-notes-1",
+      "status": 301,
+      "headers": { "Location": "/post/2016/06/es6-learn-notes-1" }
+    },
+    {
+      "src": "/post/es6-learn-notes-2",
+      "status": 301,
+      "headers": { "Location": "/post/2016/06/es6-learn-notes-2" }
+    },
+    {
+      "src": "/post/es6-learn-notes-3",
+      "status": 301,
+      "headers": { "Location": "/post/2016/06/es6-learn-notes-3" }
+    },
+    {
+      "src": "/post/es6-learn-notes-4",
+      "status": 301,
+      "headers": { "Location": "/post/2016/06/es6-learn-notes-4" }
+    },
+    {
+      "src": "/post/es6-learn-notes-5",
+      "status": 301,
+      "headers": { "Location": "/post/2016/06/es6-learn-notes-5" }
+    },
+    {
+      "src": "/post/es6-learn-notes-6",
+      "status": 301,
+      "headers": { "Location": "/post/2016/06/es6-learn-notes-6" }
+    },
+    {
+      "src": "/post/es6-learn-notes-7",
+      "status": 301,
+      "headers": { "Location": "/post/2016/06/es6-learn-notes-7" }
+    },
+    {
+      "src": "/post/es6-learn-notes-8",
+      "status": 301,
+      "headers": { "Location": "/post/2016/06/es6-learn-notes-8" }
+    },
+    {
+      "src": "/post/react-learn-notes",
+      "status": 301,
+      "headers": { "Location": "/post/2016/06/react-learn-notes" }
+    },
+    {
+      "src": "/post/redux-learn-notes",
+      "status": 301,
+      "headers": { "Location": "/post/2016/06/redux-learn-notes" }
+    },
+    {
+      "src": "/post/webpack-learn-notes",
+      "status": 301,
+      "headers": { "Location": "/post/2016/06/webpack-learn-notes" }
+    },
+    {
+      "src": "/post/wechat-mini-program-share",
+      "status": 301,
+      "headers": { "Location": "/post/2016/10/wechat-mini-program-share" }
+    },
+    {
+      "src": "/post/ubuntu-install-notes",
+      "status": 301,
+      "headers": { "Location": "/post/2017/01/ubuntu-install-notes" }
+    },
+    {
+      "src": "/post/cmd-common-use-commond",
+      "status": 301,
+      "headers": { "Location": "/post/2017/03/cmd-common-use-commond" }
+    },
+    {
+      "src": "/post/js-prototype-chain",
+      "status": 301,
+      "headers": { "Location": "/post/2017/03/js-prototype-chain" }
+    },
+    {
+      "src": "/post/flexbox-learn-notes",
+      "status": 301,
+      "headers": { "Location": "/post/2017/05/flexbox-learn-notes" }
+    },
+    {
+      "src": "/post/vue2-responsive-data-achieve",
+      "status": 301,
+      "headers": { "Location": "/post/2017/05/vue2-responsive-data-achieve" }
+    },
+    {
+      "src": "/post/you-dont-know-js-read-notes-1",
+      "status": 301,
+      "headers": { "Location": "/post/2017/11/you-dont-know-js-read-notes-1" }
+    },
+    {
+      "src": "/post/you-dont-know-js-read-notes-2",
+      "status": 301,
+      "headers": { "Location": "/post/2017/11/you-dont-know-js-read-notes-2" }
+    },
+    {
+      "src": "/post/you-dont-know-js-read-notes-3",
+      "status": 301,
+      "headers": { "Location": "/post/2017/11/you-dont-know-js-read-notes-3" }
+    },
+    {
+      "src": "/post/you-dont-know-js-read-notes-4",
+      "status": 301,
+      "headers": { "Location": "/post/2017/11/you-dont-know-js-read-notes-4" }
+    },
+    {
+      "src": "/post/you-dont-know-js-read-notes-5",
+      "status": 301,
+      "headers": { "Location": "/post/2017/11/you-dont-know-js-read-notes-5" }
+    },
+    {
+      "src": "/post/ast-share",
+      "status": 301,
+      "headers": { "Location": "/post/2018/05/ast-share" }
+    }
+  ]
+}

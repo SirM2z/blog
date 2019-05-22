@@ -1,5 +1,5 @@
 const nodejieba = require('nodejieba');
-// const format = require('date-fns/format');
+const format = require('date-fns/format');
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 module.exports = ({ node, getNode, actions }) => {
@@ -7,9 +7,10 @@ module.exports = ({ node, getNode, actions }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const { frontmatter } = node;
-    // const date = format(frontmatter.date, 'YYYYMMDDHHmmss');
+    const year = format(frontmatter.date, 'YYYY');
+    const month = format(frontmatter.date, 'MM');
     // const slug = `/post/${date}`;
-    const slug = `/post${createFilePath({ node, getNode, basePath: `src/content/posts` })}`
+    const slug = `/post/${year}/${month}${createFilePath({ node, getNode, basePath: `src/content/posts` })}`
     createNodeField({
       node,
       name: 'slug',
