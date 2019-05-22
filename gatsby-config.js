@@ -53,14 +53,14 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-74273646-1',
-        optimizeId: 'GTM-PKS39F4',
+        trackingId: 'UA-140679869-1',
+        optimizeId: 'GTM-KSC6K5R',
       },
     },
     {
       resolve: 'gatsby-plugin-baidu-analytics',
       options: {
-        siteId: '0a275bcf7d954b807e1db498d8e5b192',
+        siteId: '352a30743e53535dc780a5850c8b576c',
       },
     },
     {
