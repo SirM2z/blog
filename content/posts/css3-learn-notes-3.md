@@ -125,7 +125,7 @@ a{ transition: background 0.8s ease-in 0.3,color 0.6s ease-out 0.3;}
 
 `timing-function`(过度函数)：ease,linear,ease-in,ease-out,ease-in-out,具体如下图
 
-![缓动函数速查表](/huandonghanshu.png)
+![缓动函数速查表](https://raw.githubusercontent.com/SirM2z/assets/master/huandonghanshu.png)
 
 ## 关键帧--keyframes
 

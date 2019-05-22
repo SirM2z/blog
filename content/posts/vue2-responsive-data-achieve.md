@@ -47,7 +47,7 @@ setTimeout(function(){
 
 方案：ES5中新添加了一个方法:[Object.defineProperty]()，通过这个方法，可以自定义`getter`和`setter`函数，那么在获取对象属性或者设置对象属性时就能够执行相应的回调函数
 
-![Object.defineProperty MDN](/object_defineProperty_mdn.png)
+![Object.defineProperty MDN](https://raw.githubusercontent.com/SirM2z/assets/master/object_defineProperty_mdn.png)
 
 代码如下：
 
