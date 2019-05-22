@@ -72,13 +72,13 @@ const Copyright = (props: ICopyrightProps) => {
       <div className={classes.text}>
         <span>
           Power by
-          <a className={classes.link} href="https://www.gatsbyjs.org/">
+          <a className={classes.link} target="__blank" href="https://www.gatsbyjs.org/">
             Gatsbyjs
           </a>
         </span>
         <span>
           Design by
-          <a className={classes.link} href="https://github.com/ahonn">
+          <a className={classes.link} target="__blank" href="https://github.com/ahonn">
             Ahonn
           </a>
         </span>
