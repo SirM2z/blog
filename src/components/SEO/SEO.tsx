@@ -22,6 +22,7 @@ const SEO = (props: ISEOProps) => {
           description
           siteUrl
           twitter
+          googleSiteVerification
         }
       }
     }
@@ -29,6 +30,7 @@ const SEO = (props: ISEOProps) => {
   const metadata = _.get('site.siteMetadata', data);
   const metaTitle = title ? `${title} - ${metadata.title}` : metadata.title;
   const metaDescription = description || metadata.description;
+  const metaGoogleSiteVerification = metadata.googleSiteVerification || '';
   const metaTwitter = metadata.twitter;
 
   const url = `${metadata.siteUrl}${slug}`;
@@ -74,6 +76,10 @@ const SEO = (props: ISEOProps) => {
         {
           name: 'twitter:description',
           content: metaDescription,
+        },
+        {
+          name: 'google-site-verification',
+          content: metaGoogleSiteVerification,
         },
         ...meta,
       ]}

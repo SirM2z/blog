@@ -17,6 +17,7 @@ module.exports = {
     siteUrl: 'https://www.ryanc.top',
     since: 2015,
     twitter: '@mrz_5',
+    googleSiteVerification: 'DYnEtDF8Jaluv48UIaHVOFtrmb_O4NRJlsQ3HMfzbNs',
     menu: [
       // { name: '首页', path: '/' },
       // { name: '关于我', path: '/about' },
