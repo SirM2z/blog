@@ -7,7 +7,7 @@ keywords: ["ES6", "number", "array", "learn", "notes", "学习笔记"]
 description: "ES6 学习笔记（四）-- 数值与数组"
 tags: ["ES6"]
 categories: ["ES6"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

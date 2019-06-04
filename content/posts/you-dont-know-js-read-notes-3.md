@@ -7,7 +7,7 @@ keywords: ["javascript", "you-dont-know-js", "你不知道的JS", "notes", "读�
 description: "你不知道的 JS 读书笔记（三）-- this/原型对象"
 tags: ["JavaScript"]
 categories: ["JavaScript"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

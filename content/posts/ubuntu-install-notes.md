@@ -7,7 +7,7 @@ keywords: ["Ubuntu", "linux", "install", "notes", "安装及配置"]
 description: "Ubuntu 安装及配置"
 tags: ["Ubuntu"]
 categories: ["Ubuntu"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

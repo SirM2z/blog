@@ -7,7 +7,7 @@ keywords: ["js", "javascript", "scope", "作用域"]
 description: "浅析 JavaScript 作用域链"
 tags: ["JavaScript"]
 categories: ["JavaScript"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

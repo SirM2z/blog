@@ -7,7 +7,7 @@ keywords: ["ES6", "Generator", "Promise", "learn", "notes", "学习笔记"]
 description: "ES6 学习笔记（七）-- Generator 与 Promise"
 tags: ["ES6"]
 categories: ["ES6"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

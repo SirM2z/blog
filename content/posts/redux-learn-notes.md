@@ -7,7 +7,7 @@ keywords: ["react", "redux", "learn", "notes", "学习笔记"]
 description: "Redux 学习笔记"
 tags: ["Redux"]
 categories: ["Redux"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

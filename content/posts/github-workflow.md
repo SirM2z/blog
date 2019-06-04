@@ -7,7 +7,7 @@ keywords: ["github", "pull request", "frok"]
 description: "GitHub 从 fork 到 pull request 之基础流程"
 tags: ["Github"]
 categories: ["Github"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

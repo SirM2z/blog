@@ -44,7 +44,7 @@ function createPostPages(actions, result) {
     } = node;
 
     // eslint-disable-next-line no-console
-    console.log(`createPage: ${slug}`);
+    // console.log(`createPage: ${slug}`);
     createPage({
       path: slug,
       component: path.resolve('src/templates/blog-post.tsx'),

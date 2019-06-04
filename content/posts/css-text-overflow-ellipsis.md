@@ -7,7 +7,7 @@ keywords: ["css", "text-overflow", "ellipsis", "多行文本超出", "省略号"
 description: "多行文本溢出用省略号表示 css text overflow ellipsis"
 tags: ["CSS"]
 categories: ["CSS"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

@@ -7,7 +7,7 @@ keywords: ["css3", "选择器", "learn", "notes", "学习笔记"]
 description: "css3 学习笔记（二） 选择器（包含 css2 选择器）"
 tags: ["CSS3"]
 categories: ["CSS3"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

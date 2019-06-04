@@ -7,7 +7,7 @@ keywords: ["js", "javascript", "prototype", "原型链"]
 description: "JavaScript 原型链小结"
 tags: ["JavaScript"]
 categories: ["JavaScript"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

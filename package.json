@@ -8,7 +8,9 @@
   ],
   "license": "MIT",
   "scripts": {
+    "predev": "rimraf .cache && rimraf public",
     "dev": "gatsby develop",
+    "prebuild": "rimraf .cache && rimraf public",
     "build": "gatsby build --prefix-paths",
     "deploy": "now",
     "g-now": "node scripts/generate-now.js",
@@ -69,6 +71,7 @@
     "gatsby-source-filesystem": "^2.0.22",
     "gatsby-transformer-remark": "^2.2.6",
     "gatsby-transformer-sharp": "^2.1.17",
+    "rimraf": "^2.6.3",
     "source-map-support": "^0.5.10",
     "ts-node": "^8.0.3",
     "typescript": "^3.3.4000"

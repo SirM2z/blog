@@ -7,7 +7,7 @@ keywords: ["css3", "媒体查询", "响应式", "learn", "notes", "学习笔记"
 description: "css3 学习笔记（五） 媒体查询与响应式"
 tags: ["CSS3"]
 categories: ["CSS3"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

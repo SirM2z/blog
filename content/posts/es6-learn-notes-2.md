@@ -7,7 +7,7 @@ keywords: ["ES6", "解构赋值", "learn", "notes", "学习笔记"]
 description: "ES6 学习笔记（二）-- 解构赋值"
 tags: ["ES6"]
 categories: ["ES6"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

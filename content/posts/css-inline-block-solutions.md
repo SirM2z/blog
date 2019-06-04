@@ -7,7 +7,7 @@ keywords: ["css", "inline-block", "兼容性", "空白间距", "notes", "解决�
 description: "inline-block 的兼容性 与 空白间距解决方案"
 tags: ["CSS"]
 categories: ["CSS"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

@@ -7,7 +7,7 @@ keywords: ["ES6", "let", "const", "learn", "notes", "学习笔记"]
 description: "ES6 学习笔记（一）-- let const"
 tags: ["ES6"]
 categories: ["ES6"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

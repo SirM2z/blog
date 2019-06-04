@@ -7,7 +7,7 @@ keywords: ["Vue", "响应式原理实现", "Vue 与 React 响应式简单对比"
 description: "Vue2.x响应式原理， Vue 与 React 响应式简单对比"
 tags: ["Vue"]
 categories: ["Vue"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

@@ -7,7 +7,7 @@ keywords: ["ES6", "function", "object", "learn", "notes", "学习笔记"]
 description: "ES6 学习笔记（五）-- 函数与对象"
 tags: ["ES6"]
 categories: ["ES6"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

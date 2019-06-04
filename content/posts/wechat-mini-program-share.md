@@ -7,7 +7,7 @@ keywords: ["微信小程序"]
 description: "微信小程序分享"
 tags: ["微信小程序"]
 categories: ["微信小程序"]
-author: "ryan"
+author: "Ryan"
 ---
 
 大家好，我是技术部做前端工作的Ryan，关于微信小程序的概念和功能以及它的前景，前边Tim已经介绍的非常详细，而我将以前端的视角为大家介绍一下微信小程序。也就是PPT中看到的：

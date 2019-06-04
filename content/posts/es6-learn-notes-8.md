@@ -7,7 +7,7 @@ keywords: ["ES6", "class", "learn", "notes", "学习笔记"]
 description: "ES6 学习笔记（八）-- class"
 tags: ["ES6"]
 categories: ["ES6"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

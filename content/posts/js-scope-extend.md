@@ -7,7 +7,7 @@ keywords: ["js", "javascript", "原型链"]
 description: "浅析 JavaScript 原型链与原型链式继承"
 tags: ["JavaScript"]
 categories: ["JavaScript"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

@@ -7,7 +7,7 @@ keywords: ["ES6", "set", "map", "for...of", "learn", "notes", "学习笔记"]
 description: "ES6 学习笔记（六）-- set map 数据结构 以及 for...of 遍历"
 tags: ["ES6"]
 categories: ["ES6"]
-author: "ryan"
+author: "Ryan"
 
 ---
 

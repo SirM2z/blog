@@ -7,7 +7,7 @@ keywords: ["commond", "常用命令", "cmd", "linux", "git"]
 description: "命令行常用命令"
 tags: ["Commond"]
 categories: ["linux"]
-author: "ryan"
+author: "Ryan"
 ---
 
 ---

@@ -190,6 +190,11 @@
       "src": "/post/ast-share",
       "status": 301,
       "headers": { "Location": "/post/2018/05/ast-share" }
+    },
+    {
+      "src": "/post/promise-a-achieve-1",
+      "status": 301,
+      "headers": { "Location": "/post/2019/06/promise-a-achieve-1" }
     }
   ]
 }

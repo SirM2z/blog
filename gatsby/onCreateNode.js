@@ -11,6 +11,7 @@ module.exports = ({ node, getNode, actions }) => {
     const month = format(frontmatter.date, 'MM');
     // const slug = `/post/${date}`;
     const slug = `/post/${year}/${month}${createFilePath({ node, getNode, basePath: `src/content/posts` })}`
+    console.log(slug);
     createNodeField({
       node,
       name: 'slug',
