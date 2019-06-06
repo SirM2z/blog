@@ -8,11 +8,26 @@ import { TAG_SYMBOL } from '../../consts';
 
 const styles = (theme: any) => ({
   footer: {
+    marginTop: '20px',
+  },
+  copyright: {
     paddingTop: '10px',
-    borderTop: theme.defaultBorder,
+    borderTop: '1px dashed #e6e6e6',
+    '& p': {
+      margin: '5px 0',
+    }
+  },
+  copyrightTitle: {
+    display: 'inline-block',
+    minWidth: '5rem',
+    marginRight: '.5rem',
+    textAlign: 'right',
   },
   tagList: {
+    marginTop: '20px',
     marginBottom: '10px',
+    borderTop: theme.defaultBorder,
+    padding: '15px 0',
   },
   tag: {
     color: theme.themeColor,
@@ -32,14 +47,24 @@ type IPostFooterPorps = WithSheet<typeof styles>
 const PostFooter = (props: IPostFooterPorps) => {
   const { classes } = props;
   const post = React.useContext(PostContext) as IPostContext;
-  const { simple, frontmatter: { tags } } = post;
+  const { simple, frontmatter: { tags, lastmod, author } } = post;
 
   if (simple) {
     return null;
   }
 
   return (
-    <div className={classes.footer}>
+    <div id="PostFooter-footer" className={classes.footer}>
+      <div className={classes.copyright}>
+        <p>
+          <span className={classes.copyrightTitle}>文章作者：</span>
+          <span>{author}</span>
+        </p>
+        <p>
+          <span className={classes.copyrightTitle}>上次更新：</span>
+          <span>{lastmod}</span>
+        </p>
+      </div>
       <div className={classes.tagList}>
         {tags.map((name) => (
           <span className={classes.tag} key={name}>

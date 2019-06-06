@@ -32,7 +32,7 @@ export const getDocumentScrollTop = () => {
 };
 
 // isInViewportByElementId :: string -> boolean
-export const isInViewportByElementId = (id) => {
+export const isInViewportByElementId = (id: any) => {
   const $el = document.getElementById(id);
   if ($el === null) {
     return false;
@@ -42,7 +42,7 @@ export const isInViewportByElementId = (id) => {
   return rect.top < clientHeight;
 };
 
-export const replaceUrlWithoutRefresh = (url) => {
+export const replaceUrlWithoutRefresh = (url: any) => {
   history.replaceState('', document.title, url);
 };
 
@@ -58,7 +58,7 @@ export const groupByDateFromNodes = _.compose(
   _.entries,
   _.groupBy(
     _.compose(
-      (date) => format(date, 'YYYY/MM'),
+      (date: any) => format(date, 'YYYY/MM'),
       _.get('frontmatter.date'),
     ),
   ),
@@ -70,3 +70,79 @@ export const collectTagNamesFromNodes = _.compose(
   _.reduce(_.concat, []),
   _.map('frontmatter.tags'),
 );
+
+// generate table of post
+export const getPostDoc = (doc: any) => {
+  let resultDoc: any = [];
+  let firstIndex = -1;
+  let secondIndex = -1;
+  for (let i = 0; i < doc.length; i++) {
+    const item = doc[i];
+    if (item.depth === 1) {
+      resultDoc.push({
+        value: item.value,
+        anchor: formatAnchorID(item.value),
+        children: [],
+      });
+      firstIndex = resultDoc.length - 1;
+      secondIndex = 0;
+    } else if (item.depth === 2) {
+      if (firstIndex === -1) {
+        firstIndex = 0;
+        resultDoc[firstIndex] = {
+          value: '',
+          anchor: '',
+          children: [],
+        };
+      }
+      let currentItem = resultDoc[firstIndex].children;
+      currentItem.push({
+        value: item.value,
+        anchor: formatAnchorID(item.value),
+        children: [],
+      });
+      secondIndex = currentItem.length - 1;
+    } else if (item.depth === 3) {
+      if (firstIndex === -1) {
+        firstIndex = 0;
+        resultDoc[firstIndex] = {
+          value: '',
+          anchor: '',
+          children: [],
+        };
+      }
+      if (secondIndex === -1) {
+        secondIndex = 0;
+        resultDoc[firstIndex].children[secondIndex] = {
+          value: '',
+          anchor: '',
+          children: [],
+        };
+      }
+      let currentItem = resultDoc[firstIndex].children[secondIndex];
+      if (!currentItem) {
+        currentItem = {
+          value: '',
+          anchor: '',
+          children: [],
+        }
+      }
+      currentItem.children.push({
+        value: item.value,
+        anchor: formatAnchorID(item.value),
+        children: [],
+      })
+    }
+  }
+  return resultDoc;
+}
+
+// format anchor value
+export const formatAnchorID = (val: string) => {
+  return val.replace(/ /g, '-')
+    .replace(/\(/g, '')
+    .replace(/\)/g, '')
+    .replace(/\./g, '')
+    .replace(/\//g, '')
+    .replace(/\+/g, '');
+}

@@ -46,7 +46,7 @@ const Header = (props: IHeaderComponentProps) => {
 
   useWindowScroll((event) => {
     const scrollTop = getDocumentScrollTop();
-    if (!headerHeight) {
+    if (!headerHeight && headerRef.current) {
       headerHeight = headerRef.current.offsetHeight / 2;
     }
 

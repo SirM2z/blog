@@ -38,6 +38,12 @@ Wordpress2016.overrideThemeStyles = ({ rhythm }) => ({
     fontSize: rhythm(4 / 7),
     borderLeft: `${rhythm(1 / 8)} solid ${theme.themeColor}`,
   },
+  ul: {
+    marginLeft: '1.72rem',
+  },
+  ol: {
+    marginLeft: '1.72rem',
+  }
 });
 
 Wordpress2016.headerFontFamily = ['Georgia', 'serif'];

@@ -9,7 +9,7 @@ import Footer from '../Footer';
 const styles = (theme: any) => ({
   wrapper: {
     '& .container': {
-      overflow: 'hidden',
+      // overflow: 'hidden',
       padding: '0 50px',
     },
   },

@@ -2,8 +2,8 @@ import * as React from 'react';
 import withStyles, { WithSheet } from 'react-jss';
 
 import useValine from '../../hooks/useValine';
-import useWindowScroll from '../../hooks/useWindowScroll';
-import { isInViewportByElementId, replaceUrlWithoutRefresh } from '../../utils/helpers';
+// import useWindowScroll from '../../hooks/useWindowScroll';
+// import { isInViewportByElementId, replaceUrlWithoutRefresh } from '../../utils/helpers';
 
 const styles = (theme: any) => ({
   comment: {
@@ -45,13 +45,13 @@ const Commemt = (props: ICommentProps) => {
   useValine('#comment', path);
 
   // add `#comment` to url when scroll comment element into viewport
-  useWindowScroll(() => {
-    if (isInViewportByElementId('comment')) {
-      replaceUrlWithoutRefresh(`${location.pathname}#comment`);
-    } else if (location.hash) {
-      replaceUrlWithoutRefresh(location.pathname);
-    }
-  }, /* resize = */ true);
+  // useWindowScroll(() => {
+  //   if (isInViewportByElementId('comment')) {
+  //     replaceUrlWithoutRefresh(`${location.pathname}#comment`);
+  //   } else if (location.hash) {
+  //     replaceUrlWithoutRefresh(location.pathname);
+  //   }
+  // }, /* resize = */ true);
 
   return (
     <div className={classes.comment} >

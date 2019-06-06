@@ -40,6 +40,12 @@ const styles = (theme: any) => ({
       marginLeft: '50%',
       transform: 'translateX(-50%)',
     },
+    '& ul': {
+      marginLeft: '1.72rem',
+    },
+    '& ol': {
+      marginLeft: '1.72rem',
+    },
   },
 });
 

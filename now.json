@@ -195,6 +195,16 @@
       "src": "/post/promise-a-achieve-1",
       "status": 301,
       "headers": { "Location": "/post/2019/06/promise-a-achieve-1" }
+    },
+    {
+      "src": "/post/promise-a-achieve-2",
+      "status": 301,
+      "headers": { "Location": "/post/2019/06/promise-a-achieve-2" }
+    },
+    {
+      "src": "/post/promise-a-achieve-3",
+      "status": 301,
+      "headers": { "Location": "/post/2019/06/promise-a-achieve-3" }
     }
   ]
 }

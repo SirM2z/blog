@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 import Post from '../components/Post';
+import PostDoc from '../components/Post/PostDoc';
 import Comment from '../components/Comment';
 
 import { getPostLink } from '../utils/helpers';
@@ -44,6 +45,7 @@ const PostPageTemplate = (props: IPostPageProps) => {
         <Row className="justify-content-md-center">
           <Col lg={10}>
             <Post post={data.markdownRemark} />
+            <PostDoc post={data.markdownRemark} />
             <Comment path={postCommentPath} title={title} />
           </Col>
         </Row>
@@ -59,8 +61,14 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "YYYY/MM/DD")
+        lastmod(formatString: "YYYY/MM/DD")
+        author
         tags
         # issueId
+      }
+      headings {
+        value,
+        depth
       }
       fields {
         slug

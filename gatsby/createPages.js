@@ -12,7 +12,7 @@ function createIndexPages(actions, result) {
   const pageTotal = Math.ceil(total / PAGE_SIZE);
   for (let page = 1; page <= pageTotal; page += 1) {
     // eslint-disable-next-line no-console
-    console.log(`createPage: /page/${page}`);
+    // console.log(`createPage: /page/${page}`);
     createPage({
       path: page === 1 ? '/' : `/page/${page}`,
       component: path.resolve('src/templates/blog-index.tsx'),

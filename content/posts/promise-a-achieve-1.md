@@ -1,14 +1,20 @@
 ---
-title: "一步步实现 Promises/A+ 规范 - 系列一 "
+title: "一步步实现 Promises/A+ 规范 -- 系列一 "
 date: 2019-06-04 19:44:04
 lastmod: 2019-06-04 19:44:04
 draft: false
 keywords: ["Promise"]
-description: "一步步实现 Promises/A+ 规范 - 系列一 "
+description: "一步步实现 Promises/A+ 规范 -- 系列一 "
 tags: ["Promise"]
 categories: ["Promise"]
 author: "Ryan"
 ---
+
+## 一步步实现 Promises/A+ 规范 -- 系列
+
+- [系列一 -- 实现规范对状态以及部分 then 方法的要求](/post/2019/06/promise-a-achieve-1/)
+- [系列二 -- 实现 then 链](/post/2019/06/promise-a-achieve-2/)
+- [系列三 -- 实现 catch all resolve reject 方法](/post/2019/06/promise-a-achieve-3/)
 
 ## Promises/A+ 规范
 
@@ -46,7 +52,7 @@ author: "Ryan"
 
 ```js
 // 验证代码一
-const promise = new Promise(function(resolve, reject) {
+const promise = new Promise((resolve, reject) => {
   resolve("success");
   reject("fail");
 });
@@ -94,7 +100,7 @@ executor 错误收集
 执行如下代码：
 
 ```js
-const promise = new Promise(function(resolve, reject) {
+const promise = new Promise((resolve, reject) => {
   throw new Error("error");
 });
 console.log(promise);
@@ -148,7 +154,7 @@ promise.then(onFulfilled, onRejected);
 
 ```js
 // 验证代码二
-new Promise(function(resolve, reject) {
+new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("success");
   }, 1000);
@@ -229,10 +235,10 @@ class Promise {
 }
 module.exports = Promise;
 ```
-用 “实现代码二” 测试 “验证代码二” 时，测试结果符合规范。但面对同步、异步两种调用时，表现形式是不一样的，如“验证代码三”和“验证代码四”的输出结果不同
+用 **实现代码二** 测试 **验证代码二** 时，测试结果符合规范。但面对同步、异步两种调用时，表现形式是不一样的，如 **验证代码三** 和 **验证代码四** 的输出结果不同
 ```js
 // 验证代码三
-new Promise(function(resolve, reject) {
+new Promise((resolve, reject) => {
   console.log(1);
   setTimeout(() => {
     resolve('success');
@@ -246,7 +252,7 @@ console.log(2);
 // 输出 1 2 3 符合规范
 // --------------
 // 验证代码四
-new Promise(function(resolve, reject) {
+new Promise((resolve, reject) => {
   console.log(1);
   resolve('success');
 }).then((res) => {
@@ -257,8 +263,9 @@ new Promise(function(resolve, reject) {
 console.log(2);
 // 输出 1 3 2 不符合规范
 ```
-因此需要对 resolve 和 reject 两个方法修改如下
+因此需要将 `resolve` 和 `reject` 两个方法改为异步执行，同时 `then` 方法中的状态判断也就不需要了，因为 `then` 肯定先于 `resolve` 和 `reject` 执行，则状态一定是 `pending`，整体修改如下
 ```js
+// resolve 方法修改
 const resolve = value => {
   // 实现异步执行 then 方法中的两个参数 onFulfilled onRejected
   // 对应第4条要求
@@ -273,6 +280,7 @@ const resolve = value => {
     }
   }, 0);
 };
+// reject 方法修改
 const reject = reason => {
   // 实现异步执行 then 方法中的两个参数 onFulfilled onRejected
   // 对应第4条要求
@@ -287,7 +295,17 @@ const reject = reason => {
     }
   }, 0);
 };
+// then 方法简化
+then(onFulfilled, onRejected) {
+  if (typeof onFulfilled === "function") {
+    this.onFulfilledCallbacks.push(onFulfilled);
+  }
+  if (typeof onRejected === "function") {
+    this.onRejectedCallbacks.push(onRejected);
+  }
+}
 ```
 
-这样对于“验证代码三”和“验证代码四”就统一了结果输出，并且符合规范
+这样对于 **验证代码三** 和 **验证代码四** 就统一了结果输出，并且符合规范
 
+本篇实现了规范中对状态的要求，以及部分 `then` 方法的要求。在[下一篇文章](/post/2019/06/promise-a-achieve-2/)中将实现 `then` 链的逻辑

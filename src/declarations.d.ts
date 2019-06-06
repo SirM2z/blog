@@ -39,14 +39,22 @@ declare interface IMarkdownRemarkEdge {
   node: IMarkdownRemarkNode;
 }
 
+declare interface IMarkdownRemarkNodeHeadings {
+  value: string;
+  depth: number;
+}
+
 declare interface IMarkdownRemarkNode {
   id: number;
   frontmatter: {
     title: string;
     date: string;
+    lastmod: string;
+    author: string;
     tags: string[];
     // issueId: number;
   };
+  headings: IMarkdownRemarkNodeHeadings[];
   fields: {
     slug: string;
     keywords: string[];
