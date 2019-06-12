@@ -22,7 +22,7 @@ const styles = (theme: any) => ({
 
 type IFooterProps = WithSheet<typeof styles> & {
   metadata: ISiteMetadata;
-}
+};
 
 const Footer = (props: IFooterProps) => {
   const { classes, metadata } = props;

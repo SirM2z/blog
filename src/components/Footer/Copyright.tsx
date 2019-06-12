@@ -50,7 +50,7 @@ const styles = (theme: any) => ({
 type ICopyrightProps = WithSheet<typeof styles>;
 
 const Copyright = (props: ICopyrightProps) => {
-  const { classes } = props
+  const { classes } = props;
   const { title, since, author, menu } = React.useContext(FooterContext) as IFooterContext;
   const currentYear = new Date().getFullYear();
 

@@ -68,7 +68,7 @@ promise2.then(
 // 比较 false
 ```
 从输出可以看出 promise 的执行链：
-```
+```js
 new Promise
   => then 成功方法
   => then 成功方法（方法里抛出错误）

@@ -26,7 +26,7 @@ const PostPageTemplate = (props: IPostPageProps) => {
   const post = data.markdownRemark;
   const postLink = getPostLink(post);
   const postCommentPath = post.fields.slug;
-  const title = post.frontmatter.title
+  const title = post.frontmatter.title;
 
   const postMeta = [{
     name: 'keywords',

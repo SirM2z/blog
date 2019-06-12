@@ -28,7 +28,7 @@ const styles = (theme: any) => ({
     height: '20px',
     marginRight: '5px',
     marginBottom: '0',
-  }
+  },
 });
 
 type ILogoProps = WithSheet<typeof styles> & {

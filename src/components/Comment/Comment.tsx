@@ -30,7 +30,7 @@ const styles = (theme: any) => ({
       },
       '& .gt-comment-content': {
         backgroundColor: '#fff',
-      }
+      },
     },
   },
 });

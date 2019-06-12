@@ -73,11 +73,10 @@ export const collectTagNamesFromNodes = _.compose(
 
 // generate table of post
 export const getPostDoc = (doc: any) => {
-  let resultDoc: any = [];
+  const resultDoc: any = [];
   let firstIndex = -1;
   let secondIndex = -1;
-  for (let i = 0; i < doc.length; i++) {
-    const item = doc[i];
+  for (const item of doc) {
     if (item.depth === 1) {
       resultDoc.push({
         value: item.value,
@@ -95,7 +94,7 @@ export const getPostDoc = (doc: any) => {
           children: [],
         };
       }
-      let currentItem = resultDoc[firstIndex].children;
+      const currentItem = resultDoc[firstIndex].children;
       currentItem.push({
         value: item.value,
         anchor: formatAnchorID(item.value),
@@ -125,17 +124,17 @@ export const getPostDoc = (doc: any) => {
           value: '',
           anchor: '',
           children: [],
-        }
+        };
       }
       currentItem.children.push({
         value: item.value,
         anchor: formatAnchorID(item.value),
         children: [],
-      })
+      });
     }
   }
   return resultDoc;
-}
+};
 
 // format anchor value
 export const formatAnchorID = (val: string) => {
@@ -145,4 +144,4 @@ export const formatAnchorID = (val: string) => {
     .replace(/\./g, '')
     .replace(/\//g, '')
     .replace(/\+/g, '');
-}
+};

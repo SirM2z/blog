@@ -78,24 +78,24 @@ const PostDoc = (props: IPostDocProps) => {
   const [docTop, setDocTop] = React.useState(0);
   const [activeAnchor, setActiveAnchor] = React.useState('');
 
-  let resultDoc: docContent[] = getPostDoc(headings);
+  const resultDoc: docContent[] = getPostDoc(headings);
 
   const searchAnchor = (ary: docContent[]) => {
-    for (let i = 0; i < ary.length; i++) {
-      const firstAnchor = ary[i].anchor;
+    for (const item of ary) {
+      const firstAnchor = item.anchor;
       if (firstAnchor)  {
         const clientTop = document.getElementById(firstAnchor).getBoundingClientRect().top;
         if (clientTop > 0 && clientTop < 200) {
-          setActiveAnchor(firstAnchor)
+          setActiveAnchor(firstAnchor);
           return true;
         }
       }
-      if (ary[i].children.length > 0 && searchAnchor(ary[i].children)) {
+      if (item.children.length > 0 && searchAnchor(item.children)) {
         return true;
       }
     }
-    return false
-  }
+    return false;
+  };
 
   useWindowScroll(() => {
     if (!footerHeight && docRef.current) {
@@ -103,10 +103,15 @@ const PostDoc = (props: IPostDocProps) => {
       setDocTop(footerHeight - docRef.current.offsetHeight);
     }
     if (docRef.current) {
-      if (document.getElementById(footerElementID).getBoundingClientRect().top < docRef.current.offsetHeight + docFixTop) {
-        footerIn === false && setFooterIn(true);
+      if (document.getElementById(footerElementID).getBoundingClientRect().top
+        < (docRef.current.offsetHeight + docFixTop)) {
+        if (!footerIn) {
+          setFooterIn(true);
+        }
       } else {
-        footerIn === true && setFooterIn(false);
+        if (footerIn) {
+          setFooterIn(false);
+        }
       }
     }
     searchAnchor(resultDoc);
@@ -128,12 +133,12 @@ const PostDoc = (props: IPostDocProps) => {
                   : null}
                 {item.children.length > 0 ? docTree(item.children) : null}
               </li>
-            )
+            );
           })
         }
       </ul>
-    )
-  }
+    );
+  };
 
   return (
     <div className={classes.doc} ref={docRef}

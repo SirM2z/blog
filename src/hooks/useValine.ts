@@ -7,11 +7,11 @@ import _ from 'lodash/fp';
 // import leancloudStorage from 'leancloud-storage';
 // 兼容 ssr 写法，以下两个库使用了 window
 if (typeof window !== `undefined`) {
-  var Valine = require("valine");
-  var leancloudStorage = require("leancloud-storage");
+  var Valine = require('valine');
+  const leancloudStorage = require('leancloud-storage');
 
   // Valine 依赖 leancloudStorage ，将其挂载全局
-  var globalWindow: any = window;
+  const globalWindow: any = window;
   globalWindow.AV = leancloudStorage;
 }
 
@@ -38,14 +38,14 @@ const useValine = (elemantId: string, path: string) => {
 
   useEffect(() => {
     // console.log({valine: window.AV});
-    new Valine({
+    const valine = new Valine({
       el: elemantId ,
       appId: options.appId,
       appKey: options.appKey,
-      path: path,
-      notify: options.notify, 
-      verify: options.verify, 
-      avatar:options.avatar, 
+      path,
+      notify: options.notify,
+      verify: options.verify,
+      avatar: options.avatar,
       placeholder: options.placeholder,
       visitor: options.visitor,
     });

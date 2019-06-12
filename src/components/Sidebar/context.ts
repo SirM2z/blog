@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-export type ISidebarContext = {
+export interface ISidebarContext {
   posts: IMarkdownRemarkNode[];
-};
+}
 
 const SidebarContext = React.createContext({});
 

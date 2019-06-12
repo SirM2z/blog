@@ -27,7 +27,7 @@ type IIndexPageProps = WithSheet<typeof styles> & {
     total: number;
     limit: number;
   };
-}
+};
 
 const IndexPageTemplate = (props: IIndexPageProps) => {
   const { location, data, pageContext, classes } = props;

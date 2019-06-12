@@ -41,7 +41,7 @@ const styles = (theme: any) => ({
     '&:hover': {
       color: theme.themeColor,
       borderBottom: 'none',
-    }
+    },
   },
   '@media (max-width: 992px)': {
     extra: {

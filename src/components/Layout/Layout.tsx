@@ -77,4 +77,3 @@ const Layout = (props: ILayoutProps) => {
 };
 
 export default withStyles(styles)(Layout);
-
