@@ -22,7 +22,7 @@ module.exports = {
       // { name: '首页', path: '/' },
       // { name: '关于我', path: '/about' },
       { name: '搜索', path: '/search', header: true },
-      { name: 'Wiki', path: 'https://sirm2z.github.io/wiki', header: false },
+      { name: 'Wiki', path: 'https://wiki.ryanc.top', header: false },
       { name: 'RSS', path: 'https://www.ryanc.top/atom.xml', header: false },
     ],
     socials: [
