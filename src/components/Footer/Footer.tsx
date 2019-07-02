@@ -11,7 +11,7 @@ const styles = (theme: any) => ({
     height: '180px',
     padding: '30px 10px 40px',
     background: theme.footerBackground,
-    overflow: 'auto',
+    overflow: 'hidden',
   },
   '@media (max-width: 992px)': {
     footer: {
