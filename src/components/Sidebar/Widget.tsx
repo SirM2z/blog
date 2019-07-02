@@ -16,7 +16,7 @@ const styles = (theme: any) => ({
     letterSpacing: '1px',
   },
   content: {
-    overflow: 'auto',
+    overflow: 'hidden',
   },
 });
 
