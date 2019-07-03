@@ -27,7 +27,7 @@ const styles = (theme: any) => ({
 type IPostProps = WithSheet<typeof styles> & {
   post: IMarkdownRemarkNode;
   simple?: boolean;
-}
+};
 
 const Post = (props: IPostProps) => {
   const { classes, post, simple } = props;

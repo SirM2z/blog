@@ -1,6 +1,6 @@
 import * as React from 'react';
 import withStyles, { WithSheet } from 'react-jss';
-import { getPostDoc, formatAnchorID, getDocumentScrollTop } from '../../utils/helpers';
+import { getPostDoc } from '../../utils/helpers';
 import useWindowScroll from '../../hooks/useWindowScroll';
 
 const docFixTop = 100;
@@ -59,12 +59,12 @@ const styles = (theme: any) => ({
 
 type IPostDocProps = WithSheet<typeof styles> & {
   post: IMarkdownRemarkNode;
-}
+};
 
-interface docContent {
+interface IDocContent {
   value: string;
   anchor: string;
-  children?: docContent[];
+  children?: IDocContent[];
 }
 
 let footerHeight: number = 0;
@@ -78,16 +78,19 @@ const PostDoc = (props: IPostDocProps) => {
   const [docTop, setDocTop] = React.useState(0);
   const [activeAnchor, setActiveAnchor] = React.useState('');
 
-  const resultDoc: docContent[] = getPostDoc(headings);
+  const resultDoc: IDocContent[] = getPostDoc(headings);
 
-  const searchAnchor = (ary: docContent[]) => {
+  const searchAnchor = (ary: IDocContent[]) => {
     for (const item of ary) {
       const firstAnchor = item.anchor;
-      if (firstAnchor)  {
-        const clientTop = document.getElementById(firstAnchor).getBoundingClientRect().top;
-        if (clientTop > 0 && clientTop < 200) {
-          setActiveAnchor(firstAnchor);
-          return true;
+      if (firstAnchor) {
+        const firstAnchorDom = document.getElementById(firstAnchor);
+        if (firstAnchorDom) {
+          const clientTop = firstAnchorDom.getBoundingClientRect().top;
+          if (clientTop > 0 && clientTop < 200) {
+            setActiveAnchor(firstAnchor);
+            return true;
+          }
         }
       }
       if (item.children.length > 0 && searchAnchor(item.children)) {
@@ -117,7 +120,7 @@ const PostDoc = (props: IPostDocProps) => {
     searchAnchor(resultDoc);
   });
 
-  const docTree = (ary: docContent[]) => {
+  const docTree = (ary: IDocContent[]) => {
     if (ary[0] && ary[0].value === '') {
       ary = ary[0].children;
     }

@@ -20,9 +20,28 @@ const styles = (theme: any) => ({
     boxShadow: 'none',
     '&:hover': {
       color: Color(theme.themeColor).lighten(0.05).hex(),
-    }
+    },
   },
   markdown: {
+    overflow: 'hidden',
+    '& h1': {
+      fontSize: '26px',
+      margin: '17.5px 0',
+    },
+    '& h2': {
+      fontSize: '24px',
+      margin: '20px 0',
+    },
+    '& h3': {
+      fontSize: '20px',
+      margin: '20px 0',
+    },
+    '& p': {
+      margin: '16px 0',
+    },
+    '& blockquote': {
+      marginLeft: '0',
+    },
     '& code': {
       fontSize: '0.85em',
     },
@@ -30,7 +49,7 @@ const styles = (theme: any) => ({
       boxShadow: 'none',
     },
     '& .gatsby-highlight': {
-      margin: '30px 0',
+      margin: '16px 0',
       '& pre': {
         borderRadius: '5px',
       },
@@ -42,6 +61,12 @@ const styles = (theme: any) => ({
     },
     '& ul': {
       marginLeft: '1.72rem',
+    },
+    '& ul li p': {
+      margin: '0',
+    },
+    '& ul li ul': {
+      marginTop: '0',
     },
     '& ol': {
       marginLeft: '1.72rem',

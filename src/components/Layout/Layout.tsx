@@ -9,7 +9,7 @@ import Footer from '../Footer';
 const styles = (theme: any) => ({
   wrapper: {
     '& .container': {
-      overflow: 'hidden',
+      // overflow: 'hidden',
       padding: '0 50px',
     },
   },
@@ -21,14 +21,14 @@ const styles = (theme: any) => ({
   '@media (max-width: 576px)': {
     content: {
       paddingTop: '0',
-    }
+    },
   },
   '@media (max-width: 992px)': {
     wrapper: {
       '& .container': {
         padding: '0 20px',
       },
-    }
+    },
   },
 });
 
