@@ -7,6 +7,7 @@ import _ from 'lodash/fp';
 // import leancloudStorage from 'leancloud-storage';
 // 兼容 ssr 写法，以下两个库使用了 window
 if (typeof window !== `undefined`) {
+  // tslint:disable-next-line
   var Valine = require('valine');
   const leancloudStorage = require('leancloud-storage');
 

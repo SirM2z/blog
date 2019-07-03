@@ -15,7 +15,7 @@ const styles = (theme: any) => ({
     borderTop: '1px dashed #e6e6e6',
     '& p': {
       margin: '5px 0',
-    }
+    },
   },
   copyrightTitle: {
     display: 'inline-block',
@@ -39,10 +39,10 @@ const styles = (theme: any) => ({
   },
   link: {
     boxShadow: 'none',
-  }
+  },
 });
 
-type IPostFooterPorps = WithSheet<typeof styles>
+type IPostFooterPorps = WithSheet<typeof styles>;
 
 const PostFooter = (props: IPostFooterPorps) => {
   const { classes } = props;

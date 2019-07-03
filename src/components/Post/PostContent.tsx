@@ -74,7 +74,7 @@ const styles = (theme: any) => ({
   },
 });
 
-type IPostContextPorps = WithSheet<typeof styles>
+type IPostContextPorps = WithSheet<typeof styles>;
 
 const PostContent = (props: IPostContextPorps) => {
   const { classes } = props;

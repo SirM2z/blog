@@ -18,7 +18,7 @@ const styles = (theme: any) => ({
     boxShadow: 'none',
     '&:hover': {
       color: theme.themeColor,
-    }
+    },
   },
   date: {
     display: 'block',
@@ -26,7 +26,7 @@ const styles = (theme: any) => ({
     color: theme.garyColor,
     fontSize: '0.85em',
     lineHeight: '1rem',
-  }
+  },
 });
 
 type IRecentWidgetProps = WithSheet<typeof styles> & {

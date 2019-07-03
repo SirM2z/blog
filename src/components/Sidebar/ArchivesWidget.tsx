@@ -35,7 +35,7 @@ const styles = (theme: any) => ({
     paddingLeft: '3px',
     color: theme.themeColor,
     fontSize: '0.85em',
-  }
+  },
 });
 
 type IArchivesWidgetProps = WithSheet<typeof styles> & {
@@ -50,7 +50,7 @@ const ArchivesWidget = (props: IArchivesWidgetProps) => {
 
   return (
     <Widget title="归档">
-      {archiveGroup.slice(0, size).map(([date, posts]: [string, IMarkdownRemarkNode[]]) => (
+      {archiveGroup.slice(0, size).map(([date, articles]: [string, IMarkdownRemarkNode[]]) => (
         <div className={classes.item} key={date}>
           <Link
             className={classes.link}
@@ -64,7 +64,7 @@ const ArchivesWidget = (props: IArchivesWidgetProps) => {
                 {format(date, 'YYYY年MM月')}
               </span>
               <span className={classes.count}>
-                ({posts.length})
+                ({articles.length})
               </span>
             </span>
           </Link>

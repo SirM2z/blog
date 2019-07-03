@@ -11,7 +11,7 @@ const styles = (theme: any) => ({
 
 type ISearchResultProps = WithSheet<typeof styles> & {
   dataSource: IMarkdownRemarkNode[];
-}
+};
 
 const SearchResult = (props: ISearchResultProps) => {
   const { classes, dataSource } = props;

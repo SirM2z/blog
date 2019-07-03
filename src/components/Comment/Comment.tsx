@@ -38,7 +38,7 @@ const styles = (theme: any) => ({
 type ICommentProps = WithSheet<typeof styles> & {
   path: string;
   title: string;
-}
+};
 
 const Commemt = (props: ICommentProps) => {
   const { classes, path, title } = props;

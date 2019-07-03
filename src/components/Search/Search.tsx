@@ -6,9 +6,9 @@ import useQueryParam from '../../hooks/useQueryParam';
 import useSearchResult from '../../hooks/useSearchResult';
 import { getBrowserWindow } from '../../utils/helpers';
 
-type ISearchProps = {
+interface ISearchProps {
   posts: IMarkdownRemarkNode[];
-};
+}
 
 const Search = (props: ISearchProps) => {
   const { posts } = props;

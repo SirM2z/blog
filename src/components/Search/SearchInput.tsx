@@ -32,7 +32,7 @@ type ISearchInputProps = WithSheet<typeof styles> & {
   value: string;
   count: number;
   onChange: any;
-}
+};
 
 const SearchInput = (props: ISearchInputProps) => {
   const { classes, value, count, onChange } = props;
