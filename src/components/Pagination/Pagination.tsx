@@ -14,13 +14,13 @@ const styles = (theme: any) => ({
   },
   before: {
     width: '50%',
-    float: 'left',
-    textAlign: 'left',
+    float: 'right',
+    textAlign: 'right',
   },
   after: {
     width: '50%',
-    float: 'right',
-    textAlign: 'right',
+    float: 'left',
+    textAlign: 'left',
   },
   link: {
     width: '100%',
@@ -48,17 +48,17 @@ const Pagination = (props: IPagintionProps) => {
 
   return (
     <div className={classes.wrapper}>
-      {hasBefore && (
-        <div className={classes.before}>
-          <Link className={classes.link} to={`/page/${page + 1}`}>
+      {hasAfter && (
+        <div className={classes.after}>
+          <Link className={classes.link} to={`/page/${page - 1}`}>
             <FaChevronLeft className={classes.icon} />
             <span>上一页</span>
           </Link>
         </div>
       )}
-      {hasAfter && (
-        <div className={classes.after}>
-          <Link className={classes.link} to={`/page/${page - 1}`}>
+      {hasBefore && (
+        <div className={classes.before}>
+          <Link className={classes.link} to={`/page/${page + 1}`}>
             <span>下一页</span>
             <FaChevronRight className={classes.icon} />
           </Link>
