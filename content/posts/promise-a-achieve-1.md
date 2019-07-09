@@ -22,7 +22,7 @@ author: "Ryan"
 
 ### 一些术语
 
-![Promises/A+ Terminology](https://raw.githubusercontent.com/SirM2z/assets/master/20190604132743.png)
+![Promises/A+ Terminology](https://raw.githubusercontent.com/SirM2z/assets/master/promisesaplus-rule-1.png)
 
 翻译:
 
@@ -36,7 +36,7 @@ author: "Ryan"
 
 ### 状态要求
 
-![Promise States](https://raw.githubusercontent.com/SirM2z/assets/master/20190604133651.png)
+![Promise States](https://raw.githubusercontent.com/SirM2z/assets/master/promisesaplus-rule-2-1.png)
 
 翻译：
 
@@ -122,7 +122,7 @@ try {
 
 ### then 方法要求 - 第 1 部分
 
-![then 方法要求 - 第1部分](https://raw.githubusercontent.com/SirM2z/assets/master/20190604162408.png)
+![then 方法要求 - 第1部分](https://raw.githubusercontent.com/SirM2z/assets/master/promisesaplus-rule-2-2.png)
 
 翻译：
 

@@ -22,7 +22,7 @@ author: "Ryan"
 
 ### then 方法要求 - 第 2 部分
 
-![then 方法要求 - 第2部分](https://raw.githubusercontent.com/SirM2z/assets/master/20190604171323.png)
+![then 方法要求 - 第2部分](https://raw.githubusercontent.com/SirM2z/assets/master/promisesaplus-rule-2-3.png)
 
 翻译：
 
