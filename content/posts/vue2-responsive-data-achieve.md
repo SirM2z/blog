@@ -11,6 +11,8 @@ author: "Ryan"
 
 ---
 
+:point_right: 配合 [PPT](https://sirm2z.github.io/ppt/#/vue-data-binding) 食用更佳 :point_left:
+
 ## 实现的最终目标
 
 ```js

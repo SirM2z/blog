@@ -12,5 +12,5 @@ author: "Ryan"
 
 本篇博文的题目是在公司内部的一次技术分享的专题题目，感觉效果不错
 
-> # [技术分享 PPT](https://sirm2z.github.io/a_project/ppt/#/AST)
+> # [技术分享 PPT](https://sirm2z.github.io/ppt/#/AST)
 
