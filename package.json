@@ -69,7 +69,7 @@
     "gatsby-remark-prismjs": "^3.2.6",
     "gatsby-remark-responsive-iframe": "^2.1.1",
     "gatsby-source-filesystem": "^2.0.22",
-    "gatsby-transformer-remark": "^2.2.6",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.1.17",
     "rimraf": "^2.6.3",
     "source-map-support": "^0.5.10",
